@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login · Chataku</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-card">
+      <i class="fas fa-comments logo-icon"></i>
+      <h1 class="logo">Chataku</h1>
+      <p class="tagline">Real-time chat — pilih cara masuk</p>
+
+      <div class="provider-buttons">
+        <button id="googleBtn" class="login-btn google">
+          <i class="fab fa-google"></i> Google / Gmail
+        </button>
+        <button id="githubBtn" class="login-btn github">
+          <i class="fab fa-github"></i> GitHub
+        </button>
+        <button id="facebookBtn" class="login-btn facebook">
+          <i class="fab fa-facebook-f"></i> Facebook
+        </button>
+        <button id="anonymousBtn" class="login-btn anonymous">
+          <i class="fas fa-user-secret"></i> Anonymous
+        </button>
+      </div>
+
+      <div class="divider">atau</div>
+
+      <div class="phone-login">
+        <div id="recaptcha-container"></div>
+        <div id="phoneForm">
+          <i class="fas fa-phone-alt input-icon"></i>
+          <input type="tel" id="phoneNumber" placeholder="+628123456789" autocomplete="off">
+          <button id="sendOtpBtn" class="phone-btn">
+            <i class="fas fa-paper-plane"></i> Kirim OTP
+          </button>
+        </div>
+        <div id="otpForm" style="display: none;">
+          <i class="fas fa-key"></i>
+          <input type="text" id="otpCode" placeholder="Kode 6 digit">
+          <button id="verifyBtn" class="phone-btn">
+            <i class="fas fa-check-circle"></i> Verifikasi
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="login.js"></script>
+</body>
+</html>
